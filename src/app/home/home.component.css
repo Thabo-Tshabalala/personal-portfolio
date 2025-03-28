@@ -1,0 +1,61 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: left;
+    padding: 20px;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.intro {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.name {
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(18, 214, 214);
+}
+
+.description {
+    font-size: 18px;
+    color: white;
+    max-width: 500px;
+}
+
+  
+  .cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: #ff9800;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .cta-btn:hover {
+    background: #e68900;
+    transform: scale(1.05);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
