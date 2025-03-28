@@ -1,0 +1,43 @@
+.about-me {
+    background-color:rgb(0, 0, 0); 
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 2%;
+    margin: -8px;
+    /* come back to margin, I need to better way to achieve this */
+  }
+  
+  .about-me h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .about-me h2 {
+    font-size: 2rem;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .about-me p {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 20px;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 10px;
+    text-align: justify;
+  }
+  
+  .about-me-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
