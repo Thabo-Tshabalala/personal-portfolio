@@ -1,15 +1,13 @@
 <nav class="navbar">
-
-    <ul class="nav-links" [class.active]="isMenuActive">
-      <li><a href="#home" class="nav-item">Home</a></li>
-      <li><a href="#about" class="nav-item">About</a></li>
-      <li><a href="#projects" class="nav-item">Projects</a></li>
-      <li><a href="#contact" class="nav-item">Contact</a></li>
-    </ul>
-    <div class="hamburger" (click)="toggleMenu()" [class.active]="isMenuActive">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
-  
+  <ul class="nav-links" [class.active]="isMenuActive">
+    <li><a href="#home" class="nav-item"><span class="nav-number">00.</span>Home</a></li>
+    <li><a href="#about" class="nav-item"><span class="nav-number">01.</span>About</a></li>
+    <li><a href="#projects" class="nav-item"><span class="nav-number">02.</span>Projects</a></li>
+    <li><a href="#contact" class="nav-item"><span class="nav-number">03.</span>Contact</a></li>
+  </ul>
+  <div class="hamburger" (click)="toggleMenu()" [class.active]="isMenuActive">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>

@@ -1,15 +1,13 @@
 .skills {
     background-color: #f4f4f9;
-    padding: 60px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .skills-container {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -17,48 +15,37 @@
 .skill {
     background-color: #1e1e1e;
     color: white;
-    width: 200px; 
-    height: 250px; 
-    border-radius: 10px;
-    padding: 15px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    position: relative;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .skill:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .skill-icon {
-    width: 60px; 
-    height: 60px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
 .skill-icon img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
 }
 
 .skill-name {
-    font-size: 1.1rem; 
-    font-weight: bold;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.subskills {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 5px;
+}.subskills {
     display: flex;
     gap: 8px; 
     margin-top: 10px;

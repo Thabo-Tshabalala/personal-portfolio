@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent {
-  name: string = 'Thabo';
-  role: string = 'Backend Developer';
+  // name: string = 'Thabo';
+  // role: string = 'Backend Developer';
   description: string = `
     I'm dedicated to the philosophy of continuous learning, with a strong focus on backend development and creating scalable web solutions.
     My love for coding is fueled by the problem-solving nature of the field and the endless opportunities for growth and exploration. When I'm not working on code,

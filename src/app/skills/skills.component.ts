@@ -7,11 +7,17 @@ import * as THREE from 'three';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
+  isSidebarVisible = false; // This will track the sidebar's visibility
 
   constructor() { }
 
   ngOnInit(): void {
     this.initThreeJS();
+  }
+
+  // This method toggles the sidebar visibility
+  toggleSidebar(): void {
+    this.isSidebarVisible = !this.isSidebarVisible;
   }
 
   initThreeJS(): void {
@@ -21,7 +27,6 @@ export class SkillsComponent implements OnInit {
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
 
-
     const geometry = new THREE.BoxGeometry();
     const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
     const cube = new THREE.Mesh(geometry, material);
@@ -30,7 +35,6 @@ export class SkillsComponent implements OnInit {
 
     camera.position.z = 5;
 
-    // This has to be the contacts section, to be done
     const animate = () => {
       requestAnimationFrame(animate);
       cube.rotation.x += 0.1;
