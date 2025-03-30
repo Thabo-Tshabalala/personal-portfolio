@@ -1,29 +1,38 @@
-/* :host {
-  display: block;
-  min-height: 100vh;
-  background-color: #121212;
-} */
-
 .container {
   display: flex;
-  min-height: 100vh;
+  min-height: calc(100vh - 60px);
   padding: 20px;
+  overflow: hidden; 
+
 }
 
 .profile-card {
   width: 340px;
-  /* background-color: #1E1E1E; */
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 40px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
-  margin-left: 40px;
+  margin-right: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  max-height: 100%; 
+  overflow-y: auto; 
 }
 
+.right-container {
+  flex-grow: 1;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-height: 100%; 
+  overflow-y: auto; 
+  max-width: 70%;
+}
 .avatar-container {
   position: relative;
   margin-bottom: 20px;
@@ -118,6 +127,12 @@
 .info-value {
   margin: 2px 0 0;
   font-size: 16px;
+}
+.icon-container img {
+  width: 24px; 
+  height: 24px; 
+  object-fit: cover;
+  filter: invert(1) sepia(0) saturate(0) brightness(100%);
 }
 
 .social-links {
