@@ -11,6 +11,6 @@ export class AboutMeComponent {
   description: string = `
     I'm dedicated to the philosophy of continuous learning, with a strong focus on backend development and creating scalable web solutions.
     My love for coding is fueled by the problem-solving nature of the field and the endless opportunities for growth and exploration. When I'm not working on code,
-    I enjoy staying active at the gym, reading  books, and immersing myself in anime for relaxation and inspiration.
+    I enjoy staying active at the gym, readin books, and immersing myself in anime for relaxation and inspiration.
   `;
 }
