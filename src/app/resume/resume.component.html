@@ -1,0 +1,35 @@
+<div class="resume-container">
+    <section class="education">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div *ngFor="let edu of education" class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>{{ edu.institution }}</h3>
+            <p>{{ edu.degree }}</p>
+            <p>{{ edu.major }}</p>
+            <span>{{ edu.duration }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div *ngFor="let exp of experience" class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>{{ exp.title }}</h3>
+            <p><strong>{{ exp.company }}</strong></p>
+            <span>{{ exp.duration }}</span>
+            <p><em>{{ exp.location }}</em></p>
+            <ul>
+              <li *ngFor="let task of exp.responsibilities">{{ task }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
