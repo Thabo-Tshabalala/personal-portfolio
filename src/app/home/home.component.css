@@ -2,14 +2,13 @@
   display: flex;
   min-height: calc(100vh - 60px);
   padding: 20px;
-  overflow: hidden; 
-
+  overflow: hidden;
 }
 
 .profile-card {
   width: 340px;
   backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--onyx);
   border-radius: 20px;
   padding: 40px 25px;
   display: flex;
@@ -18,17 +17,40 @@
   color: white;
   margin-right: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  height: fit-content; 
-  overflow: hidden; 
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-header.side-by-side {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.name-title {
+  margin-top: 10px;
+}
+
+.profile-header.side-by-side .name-title {
+  margin-left: 16px;
+  margin-top: 0;
 }
 
 .right-container {
   backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--onyx);
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  max-width: 70%;
   width: fit-content;
   height: fit-content;
   overflow: hidden;
@@ -60,14 +82,15 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  animation: pulse 1.5s infinite;
-  background-color: #4af131;
+  animation: pulse 1.5s infinite ease-in-out;
+  background-color: #39ff14;
   border-radius: 50%;
   bottom: 6px;
   right: 6px;
   border: 0.2px solid #4CD137;
   cursor: pointer;
 }
+
 .status-text {
   position: absolute;
   top: 100%;
@@ -83,7 +106,7 @@
 }
 
 .status-indicator:hover .status-text {
-  display: block; 
+  display: block;
 }
 
 .name {
@@ -148,9 +171,10 @@
   margin: 2px 0 0;
   font-size: 16px;
 }
+
 .icon-container img {
-  width: 24px; 
-  height: 24px; 
+  width: 24px;
+  height: 24px;
   object-fit: cover;
   filter: invert(1) sepia(0) saturate(0) brightness(100%);
 }
@@ -172,32 +196,106 @@
   color: white;
 }
 
+.email-link {
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(57, 255, 20, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 13.985px rgba(57, 255, 20, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(57, 255, 20, 0);
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     justify-content: center;
   }
-  
+
   .profile-card {
     margin-left: 0;
     width: 100%;
     max-width: 340px;
   }
-  
 }
-.email-link {
-  text-decoration: none;
-  color: white;
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .profile-card {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .right-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 15px;
+  }
 }
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 5px #4CD137, 0 0 10px #4CD137, 0 0 15px #4CD137; 
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
   }
-  50% {
-    transform: scale(1.1); 
-    box-shadow: 0 0 10px #4CD137, 0 0 20px #4CD137, 0 0 15px #4CD137;
+
+  .profile-card {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 90%;
+    padding: 35px 25px;
   }
-  100% {
-    transform: scale(1); 
-    box-shadow: 0 0 5px #4CD137, 0 0 10px #4CD137, 0 0 10px #4CD137; 
-  }}
+
+  .right-container {
+    max-width: 90%;
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .profile-card {
+    margin-right: 20px;
+    width: 340px;
+  }
+
+  .right-container {
+    max-width: 62%;
+  }
+}
+
+.show-contacts-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--colour-primary);
+  color: var(--colour-on-primary);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 10;
+}
