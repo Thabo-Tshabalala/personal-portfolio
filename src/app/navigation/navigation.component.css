@@ -22,6 +22,35 @@
        
         box-shadow: none;
 }
+.wip-banner {
+  color:yellow;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 300px;
+  max-width: 100%;
+  position: relative;
+}
+
+.wip-banner span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollBanner 10s linear infinite;
+}
+
+.wip-banner:hover span {
+  animation-play-state: paused;
+}
+
+@keyframes scrollBanner {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 
 .container {
   display: flex;
