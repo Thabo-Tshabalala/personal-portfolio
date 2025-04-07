@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: hsla(240, 1%, 17%, 0.75);
+  background:var(--onyx);
   border: 1px solid ;
   backdrop-filter: blur(10px);
   position: fixed;
@@ -19,9 +19,9 @@
   left: auto;
   right: 0;
   border-radius: 20px 20px;
-       
-        box-shadow: none;
+  box-shadow: none;
 }
+
 .wip-banner {
   color:yellow;
   font-size: 14px;
@@ -50,7 +50,6 @@
     transform: translateX(0%);
   }
 }
-
 
 .container {
   display: flex;

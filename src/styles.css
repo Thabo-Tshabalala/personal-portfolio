@@ -15,5 +15,10 @@ font-family: var(--ff-poppins)
     --light-gray-70: hsla(0, 0%, 84%, 0.7);
     --secondary-color: #12d6d6;
     --ff-poppins: 'Poppins', sans-serif;
+    --bg-gradient-jet: linear-gradient(to bottom right, #29323c, #485563);
+    --bg-gradient-dark: linear-gradient(to bottom right, #414345, #232526);
+    --bg-gradient-dark-secondary: linear-gradient(to bottom right, #3b3f44, #1e2226);
+    --bg-gradient-dark-tertiary: linear-gradient(to bottom right, #4C5C68, #121212);
+    --onyx: hsl(240, 1%, 17%);
   }
   

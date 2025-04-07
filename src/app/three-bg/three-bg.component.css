@@ -5,6 +5,6 @@ canvas {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    background: radial-gradient(circle at top left, #001f3f, #000d1a);
+    background-color: transparent;
   }
   
