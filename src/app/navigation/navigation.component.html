@@ -3,15 +3,16 @@
     <span>👨‍🍳🚧 This portfolio is still in progress. </span>
   </div>
   <ul class="nav-links" [class.active]="isMenuActive">
-    <li><a href="#about" class="nav-item">About</a></li>
-    <li><a href="#resume" class="nav-item">Resume</a></li>
-    <li><a href="#projects" class="nav-item">Projects</a></li>
-    <li><a href="#contact" class="nav-item">Contact</a></li>
+    <li><a routerLink="/about" class="nav-item" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/resume" class="nav-item" routerLinkActive="active">Resume</a></li>
+    <li><a routerLink="/projects" class="nav-item" routerLinkActive="active">Projects</a></li>
+    <li><a routerLink="/contact" class="nav-item" routerLinkActive="active">Contact</a></li>
   </ul>
   <div class="hamburger" (click)="toggleMenu()" [class.active]="isMenuActive">
     <span></span>
     <span></span>
     <span></span>
   </div>
-</nav>  <div class="container">
-
+</nav>
+<div class="container">
+</div>
