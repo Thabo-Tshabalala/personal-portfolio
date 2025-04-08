@@ -24,7 +24,7 @@ export class ResumeComponent {
 
   experience = [
     {
-      title: 'Software Intern Developer',
+      title: 'Software Developer Intern',
       company: 'Onsight Software',
       duration: 'July, 2024 — December 2024 • 6 mos',
       location: 'Cape Town, Remote',
@@ -43,4 +43,5 @@ export class ResumeComponent {
       ]
     },
   ];
+  
 }
