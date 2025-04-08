@@ -16,7 +16,7 @@
   position: fixed;
   width: 100%;
   z-index: 1000;
-  left: auto;
+  left: 0;
   right: 0;
   border-radius: 20px 20px;
   box-shadow: none;
@@ -80,6 +80,7 @@
   color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
   font-weight: 500;
+  position: relative; 
   transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
@@ -93,11 +94,15 @@
   bottom: 0;
   left: 0;
   width: 0;
+  height: 2px; 
+  background-color: lightgray; 
+  transition: width 0.3s ease-in-out;
 }
 
 .nav-item:hover::after {
   width: 100%; 
 }
+
 
 .hamburger {
   display: none;
@@ -129,11 +134,12 @@
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
+
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none; 
     position: absolute;
-    top: 70px;
+    top: 70px; 
     right: 20px;
     width: 250px;
     background: rgba(0, 0, 0, 0.95);
@@ -142,6 +148,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
+
 
   .nav-links.active {
     display: flex;
