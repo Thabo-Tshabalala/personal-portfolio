@@ -137,27 +137,42 @@
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none; 
+    display: none;
+    flex-direction: column;
     position: absolute;
     top: 70px; 
-    right: 20px;
-    width: 250px;
-    background: rgba(0, 0, 0, 0.95);
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    right: 10px; 
+    width: 35%;
+    max-width: 260px;
+    background: #1e1e1e; 
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    gap:10px;
   }
-
 
   .nav-links.active {
     display: flex;
   }
 
-  .nav-item {
-    font-size: 1.2rem;
+  .nav-links li {
+    width: 100%;
     text-align: center;
-    padding: 10px 0;
+    margin: 8px 0;
+  }
+
+  .nav-item {
+    font-size: 0.95rem;
+    padding: 8px;
+    color: #fff;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+
+  .nav-item:hover {
+    background-color: #333;
+    color: #fff;
   }
 
   .hamburger {
