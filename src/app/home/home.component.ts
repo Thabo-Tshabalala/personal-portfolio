@@ -21,7 +21,7 @@ export class HomeComponent {
   }
 
   checkScreenSize() {
-    this.isMobileScreen = window.innerWidth <= 767;
+    this.isMobileScreen = window.innerWidth <= 1024;
   }
 
   ngOnDestroy() {
