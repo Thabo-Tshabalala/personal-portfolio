@@ -37,11 +37,11 @@ export class ResumeComponent {
         'Collaborated on the design and development of server applications using .NET and SQL'+
         'databases under supervision.',
         'Developed applications for Windows, Android, and iOS platforms, under guidance',
-        ' Proficient in debugging',
+        ' Proficient in debugging ',
         'Collaborated with other developers and backend team to deliver features.',
         'Participated in team meetings to discuss new features and project updates.',
       ]
     },
   ];
-  
+
 }
