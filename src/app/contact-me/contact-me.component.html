@@ -31,7 +31,7 @@
       <textarea id="message" formControlName="message" placeholder="Your Message"></textarea>
       <div *ngIf="submitted && f.message.errors" class="error">
         <div *ngIf="f.message.errors['required']">Message is required</div>
-        <div *ngIf="f.message.errors['minlength']">Minimum 10 characters</div>
+        <div *ngIf="f.message.errors['minlength']">Minimum 15 characters</div>
       </div>
     </div>
 
@@ -42,7 +42,7 @@
     </div>
 
     <div class="success" *ngIf="success">
-      ✅ Message sent! Thanks!
+      ✅ Message sent! We will get back to you soon.
     </div>
   </form>
 </div>
