@@ -20,5 +20,7 @@ font-family: var(--ff-poppins)
     --bg-gradient-dark-secondary: linear-gradient(to bottom right, #3b3f44, #1e2226);
     --bg-gradient-dark-tertiary: linear-gradient(to bottom right, #4C5C68, #121212);
     --onyx: hsl(240, 1%, 17%);
+    --border: hsl(0, 0%, 22%);
+    --fw-500: 500;
   }
   
