@@ -1,1 +1,15 @@
-<p>projects works!</p>
+<div class="projects-container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card" *ngFor="let project of projects">
+        <div class="project-thumbnail" [ngStyle]="{'background-color': project.bgColor}">
+          <img *ngIf="project.image" [src]="project.image" alt="{{ project.name }} logo" />
+        </div>
+        <div class="project-info">
+          <h3>{{ project.name }}</h3>
+           <!-- here i must add the type of app, eg mobile or web. use enum -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
