@@ -10,9 +10,10 @@ export class ContactService {
   constructor(private http: HttpClient) { }
 
   sendContactForm(formData: ContactForm) {
-    return this.http.post('http://localhost:8080/api/contact', formData, {
-      responseType: 'text'
-    });
+    return this.http.post(
+      'https://personal-portfolio-api-production-c537.up.railway.app/api/contact',
+      formData,
+      { responseType: 'text' }
+    );
   }
-  
 }
