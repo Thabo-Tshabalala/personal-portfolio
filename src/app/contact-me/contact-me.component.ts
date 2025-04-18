@@ -42,7 +42,6 @@ export class ContactMeComponent {
     this.success = false;
     this.errorMessage = '';
     this.loading = true;
-  
     if (this.contactForm.valid) {
       const formData: ContactForm = {
         fullName: this.contactForm.value.fullName!,
@@ -50,11 +49,10 @@ export class ContactMeComponent {
         subject: this.contactForm.value.subject!,
         message: this.contactForm.value.message!
       };
-  
+
       this.contactService.sendContactForm(formData).subscribe({
         next: (response) => {
-          this.loading = false; 
-  
+          this.loading = false;
           if (response && response === 'Email sent successfully!') {
             this.success = true;
             this.contactForm.reset();
@@ -64,14 +62,18 @@ export class ContactMeComponent {
             this.errorMessage = 'Something went wrong. Please try again.';
           }
         },
-        error: () => {
-          this.loading = false; 
-          this.errorMessage = 'Something went wrong. Please try again.';
+        error: (error) => {
+          this.loading = false;
+          if (error.status === 0) {
+            this.errorMessage = 'Network error. Please try again later.';
+          } else {
+            this.errorMessage = 'Something went wrong. Please try again.';
+          }
         }
       });
     } else {
       this.loading = false;
+      this.errorMessage = 'Please fill in all required fields correctly.';
     }
   }
-  
 }
