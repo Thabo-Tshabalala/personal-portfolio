@@ -27,11 +27,11 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  .build-line {
+  .about-me .build-line {
     margin: 20px 0;
-    font-size: 1.2rem;
+    font-size: 20px;
     font-weight: bold;
-    text-align: center;
+    text-transform: capitalize;
     color: var(--white-1);
   }
   
@@ -51,10 +51,10 @@
   .card {
     display: flex;
     align-items: center;
-    background: var(--bg-gradient-dark);
+    background: var(--border-gradient);
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 0.5px 1px #FFD700;
+    box-shadow: 0 0.5px 1px #afada1;
     min-width: 320px;
     text-align: left;
     color: #fff;
@@ -102,10 +102,10 @@
   }
   
   .skill-category {
-    background: var(--bg-gradient-dark);
+    background: var(--border-gradient);
     padding: 16px;
     border-radius: 8px;
-    box-shadow: 0 0.5px 1px #FFD700;
+    box-shadow: 0 0.5px 1px #afada1;
   }
   
   .skill-category h3 {

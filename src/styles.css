@@ -1,26 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
-/* Correct path without the ~ symbol */
 @import 'font-awesome/css/font-awesome.min.css';
 
-*{
-    margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: var(--ff-poppins)
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-poppins);
 }
+
+::selection {
+  background-color: #eed754c9;
+  color: #000000;
+}
+
 :root {
-     --white-1: hsl(0, 0%, 100%);
-    --white-2: hsl(0, 0%, 98%);
-    --light-gray: hsl(0, 0%, 84%);
-    --light-gray-70: hsla(0, 0%, 84%, 0.7);
-    --secondary-color: #12d6d6;
-    --ff-poppins: 'Poppins', sans-serif;
-    --bg-gradient-jet: linear-gradient(to bottom right, #29323c, #485563);
-    --bg-gradient-dark: linear-gradient(to bottom right, #414345, #232526);
-    --bg-gradient-dark-secondary: linear-gradient(to bottom right, #3b3f44, #1e2226);
-    --bg-gradient-dark-tertiary: linear-gradient(to bottom right, #4C5C68, #121212);
-    --onyx: hsl(240, 1%, 17%);
-    --border: hsl(0, 0%, 22%);
-    --fw-500: 500;
-  }
-  
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 0%, 98%);
+  --light-gray: hsl(0, 0%, 84%);
+  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --secondary-color: #12d6d6;
+  --ff-poppins: 'Poppins', sans-serif;
+  --bg-gradient-jet: linear-gradient(to bottom right, #29323c, #485563);
+  --bg-gradient-dark: linear-gradient(to bottom right, #414345, #232526);
+  --bg-gradient-dark-secondary: linear-gradient(to bottom right, #3b3f44, #1e2226);
+  --bg-gradient-dark-tertiary: linear-gradient(to bottom right, #4C5C68, #121212);
+  --onyx: hsl(240, 1%, 17%);
+  --border: hsl(0, 0%, 22%);
+  --fw-500: 500;
+  --fw-300: 300;
+  --border-gradient: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+}
