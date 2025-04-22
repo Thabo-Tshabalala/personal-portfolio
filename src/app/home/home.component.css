@@ -34,6 +34,7 @@
   height: fit-content;
   overflow: hidden;
   position: relative;
+  /* need to work on this, the card must be fixed  */
 }
 
 .profile-header {
