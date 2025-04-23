@@ -4,7 +4,7 @@
     <div class="row">
       <div class="form-group">
         <label for="fullName">Full Name</label>
-        <input id="fullName" formControlName="fullName" />
+        <input id="fullName" formControlName="fullName"  placeholder=" full name"/>
         <div *ngIf="f.fullName?.invalid && (f.fullName?.touched || submitted)" class="error">
           Full Name is required and must be at least 2 characters.
         </div>
