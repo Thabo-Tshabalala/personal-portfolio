@@ -139,6 +139,7 @@
   padding: 7px 18px;
   border-radius: 8px;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .divider {
@@ -238,7 +239,6 @@
   .profile-card {
     margin-left: 0;
     width: 100%;
-    max-width: 305px;
   }
 }
 
@@ -277,12 +277,12 @@
   .profile-card {
     margin-right: 0;
     margin-bottom: 20px;
-    width: 90%;
+    width: 100%;
     padding: 35px 25px;
   }
 
   .right-container {
-    max-width: 90%;
+    max-width: 100%;
     width: 100%;
     padding: 20px;
   }
