@@ -6,7 +6,6 @@
   background-color: #121212;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-  font-family: "Segoe UI", sans-serif;
   color: #f1f1f1;
 }
 
@@ -21,7 +20,6 @@ h2 {
 .row {
   display: flex;
   gap: 20px;
-  margin-bottom: 20px;
 }
 
 .row .form-group {
@@ -44,6 +42,7 @@ textarea {
   border-radius: 10px;
   transition: all 0.3s ease;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 input::placeholder,
