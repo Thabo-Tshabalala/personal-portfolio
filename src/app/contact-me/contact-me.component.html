@@ -3,7 +3,6 @@
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <div class="row">
       <div class="form-group">
-        <label for="fullName">Full Name</label>
         <input id="fullName" formControlName="fullName"  placeholder=" Full name"/>
         <div *ngIf="f.fullName?.invalid && (f.fullName?.touched || submitted)" class="error">
           Full Name is required and must be at least 2 characters.
@@ -11,7 +10,6 @@
       </div>
 
       <div class="form-group">
-        <label for="email">Email</label>
         <input id="email" formControlName="email" placeholder="Email address" />
         <div *ngIf="f.email?.invalid && (f.email?.touched || submitted)" class="error">
           A valid email is required.
@@ -20,7 +18,6 @@
     </div>
 
     <div class="form-group">
-      <label for="subject">Subject</label>
       <input id="subject" formControlName="subject" placeholder="Subject" />
       <div *ngIf="f.subject?.invalid && (f.subject?.touched || submitted)" class="error">
         Subject is required and must be at least 3 characters.
@@ -28,7 +25,6 @@
     </div>
 
     <div class="form-group">
-      <label for="message">Message</label>
       <textarea id="message" formControlName="message" placeholder="Message "></textarea>
       <div *ngIf="f.message?.invalid && (f.message?.touched || submitted)" class="error">
         Message is required and must be at least 10 characters.
