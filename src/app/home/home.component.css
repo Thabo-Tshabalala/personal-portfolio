@@ -11,13 +11,8 @@
   padding: 2rem;
   background-color: #181818;
   color: #fff;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
-.page-content {
-  flex: 1;
-  margin-top: 2rem;
-}
-
 
 .profile-card {
   width: 340px;
