@@ -66,6 +66,10 @@
   height: fit-content;
   overflow: hidden;
 }
+.page-content {
+  flex: 1;
+  margin-top: 2rem;
+}
 
 .avatar-container {
   position: relative;
