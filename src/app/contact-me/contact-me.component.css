@@ -100,3 +100,8 @@ button:hover {
   color: #32cd32;
   font-weight: 500;
 }
+button:disabled {
+  cursor: not-allowed; 
+  opacity: 0.5;       
+}
+
