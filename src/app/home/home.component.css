@@ -262,6 +262,7 @@
     max-width: 100%;
     width: 100%;
     padding: 15px;
+    padding-bottom: calc(60px + 20px); 
   }
 }
 
