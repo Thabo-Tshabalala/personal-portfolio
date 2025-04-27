@@ -9,10 +9,16 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  background-color: #181818;
   color: #fff;
+  backdrop-filter: blur(15px);
+  background: var(--onyx);
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: fit-content; 
+  height: fit-content; 
+  
 }
-
 .profile-card {
   width: 340px;
   backdrop-filter: blur(15px);
@@ -53,16 +59,7 @@
   margin-top: 0;
 }
 
-.right-container {
-  backdrop-filter: blur(15px);
-  background: var(--onyx);
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  width: fit-content;
-  height: fit-content;
-  overflow: hidden;
-}
+
 .page-content {
   flex: 1;
   margin-top: 2rem;
@@ -132,8 +129,8 @@
 .title {
   margin: 8px 0 20px;
   font-size: 14px;
-  background-color: #222222;
-  padding: 7px 18px;
+  background-color: #333333;
+  padding: 4px 7px;
   border-radius: 8px;
   display: inline-block;
   white-space: nowrap;
@@ -188,11 +185,12 @@
 }
 
 .icon-container img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   object-fit: cover;
-  filter: invert(1) sepia(0) saturate(0) brightness(100%);
+  filter: invert(1) sepia(1) saturate(5) brightness(95%) contrast(100%) hue-rotate(322deg);
 }
+
 
 .social-links {
   display: flex;
