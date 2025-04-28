@@ -84,7 +84,7 @@
 
 .card-content h3 {
   margin: 0;
-  font-size: 1.5rem;
+  white-space: nowrap;
   font-weight: 700;
   color: var(--white-1);
   letter-spacing: 0.5px;
