@@ -9,10 +9,10 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectsComponent {
   projects = [
-    { name: 'School IMS', bgColor: '#7e7e7e', image: 'assets/school-ims.jpg' },
-    { name: 'Food App', bgColor: '#ff5757', image: 'assets/meals_app.jpg' },
-    { name: 'Florist App', bgColor: '#7dd87d', image: 'assets/florist.jpg' },
-    { name: 'Roomza Connect', bgColor: '#ffffff', image: 'assets/roomza.jpg' },
-    { name: 'Quiz App', bgColor: '#ec1c8f', image: 'assets/quiz app logo.jpg' },
+    { name: 'School IMS', bgColor: '#7e7e7e', image: 'assets/school-ims.jpg',githubLink: 'https://github.com/Thabo-Tshabalala/School-IMS-FrontEnd' },
+    { name: 'Meals App', bgColor: '#ff5757', image: 'assets/meals_app.jpg' ,githubLink: 'https://github.com/Thabo-Tshabalala/Meals_App'},
+    { name: 'Florist App', bgColor: '#7dd87d', image: 'assets/florist.jpg',githubLink: 'https://github.com/Thabo-Tshabalala/Florist-Web-Application-Client-Side' },
+    { name: 'Roomza Connect', bgColor: '#ffffff', image: 'assets/roomza.jpg' ,githubLink: 'https://github.com/Thabo-Tshabalala/roomza-connect-front-end'},
+    { name: 'Quiz App', bgColor: '#ec1c8f', image: 'assets/quiz app logo.jpg',githubLink: 'https://github.com/Thabo-Tshabalala/QuizApp' },
   ];
 }
