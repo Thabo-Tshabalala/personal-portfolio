@@ -9,17 +9,25 @@ import { CommonModule } from '@angular/common';
 })
 export class ResumeComponent {
   education = [
-    {
-      institution: 'Bongane Lebohang Secondary School',
-      degree: 'Matriculation',
-      duration: '2018 — 2020'
+            {
+      institution: 'Cape Peninsula University of Technology',
+      degree: 'Advanced Diploma in Information Communication and Technology',
+      major: 'Software Development',
+      duration: '2025 — Present'
     },
+    
     {
       institution: 'Cape Peninsula University of Technology',
       degree: 'Diploma in Information Communication and Technology',
       major: 'Software Development',
       duration: '2022 — 2024'
-    }
+    },
+
+        {
+      institution: 'Bongane Lebohang Secondary School',
+      degree: 'National Senior Certificate (Matriculation)',
+      duration: '2018 — 2020'
+    },
   ];
 
   experience = [
