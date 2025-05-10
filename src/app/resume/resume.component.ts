@@ -37,16 +37,16 @@ export class ResumeComponent {
       duration: 'July, 2024 — December 2024 • 6 mos',
       location: 'Cape Town, Remote',
       responsibilities: [
-        'Developed multiple fully functional UI components for the Onsight application including the main menu [ '
+        'Developed multiple fully functional UI components for the Onsight application including the main menu , '
         + 'user details, logout, app version, and internet connectivity status],customer search functionality, customer creation, '
         + 'and customer group selection.',
-        'Resolved a critical font sizing issue in the application’s UI by implementing a scalable'+
+        'Resolved a critical font sizing issue in the application’s UI by implementing a scalable '+
         'solution, improving readability and ensuring consistent font rendering across all  devices.',
         'Collaborated on the design and development of server applications using .NET and SQL'+
         'databases under supervision.',
-        'Developed applications for Windows, Android, and iOS platforms, under guidance',
-        ' Proficient in debugging ',
-        'Collaborated with other developers and backend team to deliver features.',
+        'Assisted in the development of cross-platform applications for Windows, Android, and iOS using Blazor Hybrid ',
+        'Gained hands-on experience in debugging and troubleshooting application issues. ',
+        'Collaborated with other developers to deliver features.',
         'Participated in team meetings to discuss new features and project updates.',
       ]
     },
