@@ -9,10 +9,10 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectsComponent {
   projects = [
-    { name: 'School IMS', bgColor: '#7e7e7e', image: 'assets/luffy.jpg' },
-    { name: 'Food App', bgColor: '#ff5757', image: 'assets/' },
-    { name: 'Florist App', bgColor: '#7dd87d', image: 'assets/' },
-    { name: 'Roomza Connect', bgColor: '#ffffff', image: 'assets/' },
-    { name: 'Quiz App', bgColor: '#ec1c8f', image: 'assets/' },
+    { name: 'School IMS', bgColor: '#7e7e7e', image: 'assets/school-ims.jpg' },
+    { name: 'Food App', bgColor: '#ff5757', image: 'assets/meals_app.jpg' },
+    { name: 'Florist App', bgColor: '#7dd87d', image: 'assets/florist.jpg' },
+    { name: 'Roomza Connect', bgColor: '#ffffff', image: 'assets/roomza.jpg' },
+    { name: 'Quiz App', bgColor: '#ec1c8f', image: 'assets/quiz app logo.jpg' },
   ];
 }
