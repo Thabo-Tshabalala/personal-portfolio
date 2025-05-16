@@ -283,6 +283,12 @@
     padding: 20px;
   }
 }
+  .profile-header.side-by-side {
+    flex-direction: row;
+    justify-content: flex-start; 
+    text-align: left;
+    margin-right: auto;
+  }
 
 @media (min-width: 1025px) {
   .container {
