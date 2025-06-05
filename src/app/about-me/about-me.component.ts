@@ -6,10 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent {
-  // name: string = 'Thabo';
-  // role: string = 'Backend Developer';
-  description: string = `
-   I'm dedicated to the philosophy of continuous learning, with a strong focus on backend development and building scalable web solutions. My passion for coding is driven by its problem-solving nature and the endless opportunities it offers for growth and exploration. 
-   If you're looking for a motivated fresher with a solid foundation and a strong desire to grow, I'd be excited to contribute and learn as part of your team.
-  `;
+  aboutMeHeading = 'About Me';
+
+  description: string[] = [
+    `I'm dedicated to the philosophy of continuous learning, with a strong focus on backend development and building scalable web solutions.
+    I approach problems with curiosity and empathy, trying to understand various needs and challenges to help build better solutions.`
+  ];
+
+  outsideCodingBody: string[] = [
+    `In my free time, I geek out over new tech, hit the gym, search for good reads at the library, 
+     and vibe to anything with a good beat, genre doesn’t matter.`
+  ];
 }
