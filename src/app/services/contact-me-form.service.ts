@@ -11,7 +11,7 @@ export class ContactService {
 
   sendContactForm(formData: ContactForm) {
     return this.http.post(
-      'https://personal-portfolio-api-8uwk.onrender.com/api/contact',
+      'https://personal-portfolio-api-production-3ffd.up.railway.app/api/contact',
       formData,
       { responseType: 'text' }
     );

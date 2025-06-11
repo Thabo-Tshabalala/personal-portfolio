@@ -24,7 +24,7 @@ export class PersonalBotComponent {
     this.userInput = '';
 
     //  this.http.post('http://localhost:8080/api/chat/ask', locally
-   this.http.post('https://personal-portfolio-api-8uwk.onrender.com/api/chat/ask', question, {
+   this.http.post('https://personal-portfolio-api-production-3ffd.up.railway.app/api/chat/ask', question, {
       responseType: 'text'
     }).subscribe({
       next: (response: string) => {
