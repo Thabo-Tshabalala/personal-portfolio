@@ -1,40 +1,37 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-personal-bot',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HttpClientModule],
   templateUrl: './personal-bot.component.html',
   styleUrls: ['./personal-bot.component.css']
 })
 export class PersonalBotComponent {
-  isOpen = false;
   userInput = '';
   messages: { text: string; from: 'user' | 'bot' }[] = [];
 
-  toggleChat() {
-    this.isOpen = !this.isOpen;
-  }
+  constructor(private http: HttpClient) {} 
 
   sendMessage() {
     if (!this.userInput.trim()) return;
 
-    this.messages.push({ text: this.userInput, from: 'user' });
-
-    const response = this.getBotResponse(this.userInput);
-    setTimeout(() => {
-      this.messages.push({ text: response, from: 'bot' });
-    }, 500);
-
+    const question = this.userInput;
+    this.messages.push({ text: question, from: 'user' });
     this.userInput = '';
-  }
 
-  getBotResponse(input: string): string {
-    const lower = input.toLowerCase();
-    if (lower.includes('skills')) return 'I work with Java, Dart, Angular, and more!';
-    if (lower.includes('location')) return 'I’m based in Cape Town 🌍';
-    return 'That sounds interesting! Tell me more.';
+    this.http.post('http://localhost:8080/api/chat/ask', question, {
+      responseType: 'text'
+    }).subscribe({
+      next: (response: string) => {
+        this.messages.push({ text: response, from: 'bot' });
+      },
+      error: () => {
+        this.messages.push({ text: '⚠️ Unable to reach the kisha backy.', from: 'bot' });
+      }
+    });
   }
 }
