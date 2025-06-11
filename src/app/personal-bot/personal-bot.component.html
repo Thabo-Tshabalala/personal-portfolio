@@ -1,0 +1,45 @@
+<section class="tbot-section">
+  <div class="tbot-header">
+    <h2>👋 Welcome to Tbot</h2>
+    <p>
+      Your personal assistant who knows everything about Thabo.
+      Ask me anything!
+    </p>
+  </div>
+
+  <div class="tbot-actions">
+    <button class="tbot-btn" (click)="userInput = 'What does Thabo specialize in?'; sendMessage()">
+      🧠 What does Thabo specialize in?
+    </button>
+    <button class="tbot-btn" (click)="userInput = 'What is Thabo’s current role and experience?'; sendMessage()">
+      💼 What's Thabo’s current role and experience?
+    </button>
+    <button class="tbot-btn" (click)="userInput = 'What exciting projects has Thabo built?'; sendMessage()">
+      🚀 What exciting projects has Thabo built?
+    </button>
+    <button class="tbot-btn" (click)="userInput = 'Tell me about Thabo’s growth journey'; sendMessage()">
+      📈 Tell me about Thabo’s growth journey
+    </button>
+  </div>
+
+  <div class="tbot-features">
+    <span>🤖 AI-Powered Responses</span>
+    <span>💬 Natural Conversations</span>
+  </div>
+
+  <div class="tbot-messages">
+    <div *ngFor="let msg of messages" [class.user]="msg.from === 'user'" [class.bot]="msg.from === 'bot'">
+      <p><strong>{{ msg.from === 'user' ? 'You' : 'Tbot' }}:</strong> {{ msg.text }}</p>
+    </div>
+  </div>
+
+  <div class="tbot-input">
+    <input
+      type="text"
+      [(ngModel)]="userInput"
+      placeholder="Ask me anything about Thabo, his experience, skills, or hobbies!"
+      (keydown.enter)="sendMessage()"
+    />
+    <button (click)="sendMessage()">➤</button>
+  </div>
+</section>
