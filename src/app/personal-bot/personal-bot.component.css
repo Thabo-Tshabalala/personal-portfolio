@@ -11,48 +11,41 @@
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
-
 .tbot-header h2 {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 15px;
   color: #ffc107;
   font-weight: 200;
-  margin-bottom: 15px;
 }
-
 .tbot-header p {
   font-size: 1rem;
   color: #ccc;
   max-width: 600px;
   margin: 0 auto;
 }
-
 .tbot-actions {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
   margin: 2.5rem 0;
 }
-
 .tbot-btn {
   background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem;
   border-radius: 1rem;
   color: #fff;
-  cursor: pointer;
   font-size: 1rem;
+  cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 .tbot-btn:hover {
   background: #ffc107;
   color: #121212;
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(255, 193, 7, 0.3);
 }
-
 .tbot-features {
   display: flex;
   justify-content: center;
@@ -62,51 +55,44 @@
   margin-bottom: 2rem;
   flex-wrap: wrap;
 }
-
 .tbot-input {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
   margin-top: 1.5rem;
 }
-
 .tbot-input input {
   width: 60%;
   padding: 0.85rem 1.25rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  background-color: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05);
   color: #fff;
-  font-size: 1rem;
+  font-size: 14px;
   transition: all 0.3s ease;
 }
-
 .tbot-input input:focus {
-  outline: none;
+  outline: 0;
   border-color: #ffc107;
-  background-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
-
 .tbot-input button {
-  background-color: #ffc107;
+  background: #ffc107;
   color: #121212;
-  border: none;
+  border: 0;
   border-radius: 50%;
   width: 2.75rem;
   height: 2.75rem;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font: bold 1.2rem sans-serif;
   cursor: pointer;
   transition: transform 0.2s ease;
   box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
 }
-
 .tbot-input button:hover {
   transform: scale(1.1);
 }
-
 .tbot-messages {
-  background-color: rgba(30, 30, 30, 0.9);
+  background: rgba(30, 30, 30, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.25rem;
   max-height: 300px;
@@ -119,31 +105,25 @@
   font-size: 0.95rem;
   line-height: 1.6;
 }
-
 .tbot-messages::-webkit-scrollbar {
   width: 6px;
 }
-
 .tbot-messages::-webkit-scrollbar-thumb {
   background: #444;
   border-radius: 3px;
 }
-
 .tbot-messages .user,
 .tbot-messages .bot {
   margin-bottom: 1rem;
   display: flex;
   animation: fadeIn 0.3s ease-in;
 }
-
 .tbot-messages .user {
   justify-content: flex-end;
 }
-
 .tbot-messages .bot {
   justify-content: flex-start;
 }
-
 .tbot-messages p {
   max-width: 70%;
   padding: 0.85rem 1.25rem;
@@ -152,19 +132,16 @@
   font-size: 0.95rem;
   word-wrap: break-word;
 }
-
 .tbot-messages .user p {
-  background-color: #ffc107;
+  background: #ffc107;
   color: #121212;
   border-bottom-right-radius: 0.35rem;
 }
-
 .tbot-messages .bot p {
-  background-color: #2a2a2a;
+  background: #2a2a2a;
   color: #ddd;
   border-bottom-left-radius: 0.35rem;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -174,4 +151,7 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+.tbot-messages:empty {
+  display: none;
 }
