@@ -5,7 +5,6 @@
 }
 
 .projects-container h2 {
-  color: white;
   margin-bottom: 16px;
 }
 
@@ -22,7 +21,6 @@
   border-radius: 16px;
   overflow: hidden;
   background-color: #2a2a2a;
-  color: white;
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease;
@@ -60,7 +58,7 @@
 .project-info p {
   margin: 4px 0 0;
   font-size: 14px;
-  color: #cccccc;
+  color:var(--light-gray);
 }
 
 .eye-overlay {
@@ -69,7 +67,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--onyx);
-  color: gold;
+  color: var(--accent-yellow);
   padding: 14px;
   border-radius: 8px;
   font-size: 18px;

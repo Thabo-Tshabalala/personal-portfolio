@@ -7,19 +7,17 @@
   max-width: 800px;
   margin: 3rem auto;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 12px rgba(255, 255, 255, 0.05);
-  color: #fff;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 .tbot-header h2 {
-  font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #ffc107;
+  color: var(--accent-yellow);
   font-weight: 200;
 }
 .tbot-header p {
   font-size: 1rem;
-  color: #ccc;
+  color:var(--light-gray);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -34,17 +32,17 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem;
   border-radius: 1rem;
-  color: #fff;
+  color: var(--background-color);
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .tbot-btn:hover {
-  background: #ffc107;
-  color: #121212;
+  background: var(--accent-yellow);
+  color:var(--background-color);
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(255, 193, 7, 0.3);
+  box-shadow: var(--bg-gradient-dark);
 }
 .tbot-features {
   display: flex;
@@ -67,17 +65,17 @@
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: rgba(255, 255, 255, 0.05);
-  color: #fff;
+  color: var(--white-1);
   font-size: 14px;
   transition: all 0.3s ease;
 }
 .tbot-input input:focus {
   outline: 0;
-  border-color: #ffc107;
+  border-color: var(--accent-yellow);
   background: rgba(255, 255, 255, 0.1);
 }
 .tbot-input button {
-  background: #ffc107;
+  background: var(--accent-yellow);
   color: #121212;
   border: 0;
   border-radius: 50%;
@@ -109,7 +107,7 @@
   width: 6px;
 }
 .tbot-messages::-webkit-scrollbar-thumb {
-  background: #444;
+  background:var(--light-gray);
   border-radius: 3px;
 }
 .tbot-messages .user,
@@ -133,7 +131,7 @@
   word-wrap: break-word;
 }
 .tbot-messages .user p {
-  background: #ffc107;
+  background: var(--accent-yellow);
   color: #121212;
   border-bottom-right-radius: 0.35rem;
 }

@@ -13,6 +13,7 @@
 }
 
 :root {
+  --accent-yellow: #ffc107;
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --light-gray: hsl(0, 0%, 84%);

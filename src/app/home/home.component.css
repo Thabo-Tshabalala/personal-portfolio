@@ -163,7 +163,7 @@
   justify-content: center;
   align-items: center;
   margin-right: 18px;
-  color: #FFD700;
+  color: var(--accent-yellow);
   font-size: 18px;
 }
 

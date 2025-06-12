@@ -5,7 +5,7 @@
   background-color: #121212;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
+  color: var(--white-1);
 }
 
 h2 {
@@ -13,7 +13,7 @@ h2 {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 25px;
-  color: #fff;
+  color:var(--white-1);
 }
 
 .row {
@@ -34,7 +34,7 @@ h2 {
 input,
 textarea {
   background-color: #1e1e1e;
-  color: #fff;
+  color: var(--white-1);
   border: 1px solid #333;
   padding: 14px 16px;
   font-size: 16px;
@@ -68,7 +68,7 @@ textarea {
 }
 
 button {
-  background-color: #ffc107;
+  background-color: var(--accent-yellow);
   color: #000;
   padding: 12px 24px;
   font-size: 16px;
@@ -83,7 +83,7 @@ button {
 }
 
 button:hover {
-  background-color: #ffdd57;
+  background-color: var(--accent-yellow);
   transform: scale(1.05);
 }
 
