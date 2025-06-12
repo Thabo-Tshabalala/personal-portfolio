@@ -43,3 +43,5 @@ Thumbs.db
 
 # Ignore global styles
 src/styles.css linguist-language= ignore
+# Hide home component CSS
+src/app/home/home.component.css linguist-language= ignore
