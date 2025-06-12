@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
 
 @Component({
   selector: 'app-personal-bot',
@@ -10,11 +11,15 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   templateUrl: './personal-bot.component.html',
   styleUrls: ['./personal-bot.component.css']
 })
-export class PersonalBotComponent {
+export class PersonalBotComponent implements AfterViewChecked {
   userInput = '';
   messages: { text: string; from: 'user' | 'bot' }[] = [];
 
-  constructor(private http: HttpClient) {} 
+  private previousMessagesLength = 0;
+
+  @ViewChild('messagesContainer') private messagesContainer!: ElementRef;
+
+  constructor(private http: HttpClient) {}
 
   sendMessage() {
     if (!this.userInput.trim()) return;
@@ -23,10 +28,11 @@ export class PersonalBotComponent {
     this.messages.push({ text: question, from: 'user' });
     this.userInput = '';
 
-    //  this.http.post('http://localhost:8080/api/chat/ask', locally
-   this.http.post('https://personal-portfolio-api-production-3ffd.up.railway.app/api/chat/ask', question, {
-      responseType: 'text'
-    }).subscribe({
+    this.http.post(
+      'https://personal-portfolio-api-production-3ffd.up.railway.app/api/chat/ask',
+      question,
+      { responseType: 'text' }
+    ).subscribe({
       next: (response: string) => {
         this.messages.push({ text: response, from: 'bot' });
       },
@@ -34,5 +40,24 @@ export class PersonalBotComponent {
         this.messages.push({ text: '⚠️ Unable to reach the kisha backy.', from: 'bot' });
       }
     });
+  }
+
+  ngAfterViewChecked(): void {
+    if (this.messages.length !== this.previousMessagesLength) {
+      this.previousMessagesLength = this.messages.length;
+      setTimeout(() => this.scrollToBottom(), 0);
+    }
+  }
+
+  scrollToBottom(): void {
+    try {
+      const container = this.messagesContainer.nativeElement;
+      container.scrollTo({
+        top: container.scrollHeight,
+        behavior: 'smooth'
+      });
+    } catch (err) {
+      console.warn('Scroll failed:', err);
+    }
   }
 }

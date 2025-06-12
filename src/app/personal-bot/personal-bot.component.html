@@ -27,11 +27,11 @@
     <span>💬 Natural Conversations</span>
   </div>
 
-  <div class="tbot-messages">
-    <div *ngFor="let msg of messages" [class.user]="msg.from === 'user'" [class.bot]="msg.from === 'bot'">
-      <p><strong>{{ msg.from === 'user' ? 'You' : 'Tbot' }}:</strong> {{ msg.text }}</p>
-    </div>
+<div class="tbot-messages" #messagesContainer>
+  <div *ngFor="let msg of messages" [class.user]="msg.from === 'user'" [class.bot]="msg.from === 'bot'">
+    <p><strong>{{ msg.from === 'user' ? 'You' : 'Tbot' }}:</strong> {{ msg.text }}</p>
   </div>
+</div>
 
   <div class="tbot-input">
     <input
