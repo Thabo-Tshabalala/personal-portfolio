@@ -81,6 +81,7 @@
 }
 
 .nav-item {
+  text-wrap: nowrap;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
