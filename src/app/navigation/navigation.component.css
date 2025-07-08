@@ -105,6 +105,27 @@
   transition: width 0.3s ease-in-out;
 }
 
+.tbot {
+  color: var(--accent-yellow);
+  display: inline-block;
+  padding: 3px 7px;
+  border: 1px solid var(--accent-yellow);
+  background-color: rgb(255, 215, 0,0.1);
+  border-radius: 4px;
+  font-size: 90%;
+}
+.tbot::after {
+  content: 'AI';
+  position: absolute;
+  font-size: 10px;
+  bottom: 0;
+  left: 50px;
+  top: -12px;
+  width: 0;
+  border-radius: 50px;
+  color: var(--accent-yellow);
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
