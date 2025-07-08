@@ -37,7 +37,7 @@ export class ResumeComponent {
       duration: 'July, 2024 — December 2024 • 6 mos',
       location: 'Cape Town, Remote',
       responsibilities: [
-        'Developed UI features for navigation, user information, and customer management in the Onsight App.',
+        'Developed full-stack features for navigation, user information, and customer management in the Onsight App.',
         'Resolved a critical font sizing issue, ensuring consistent readability on all devices.',
         'Contributed to cross-platform app development using Blazor Hybrid for Windows, Android, and iOS.',
         'Gained hands-on experience in debugging and troubleshooting application issues. ',
