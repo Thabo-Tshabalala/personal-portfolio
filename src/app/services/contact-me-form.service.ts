@@ -11,7 +11,7 @@ export class ContactService {
 
   sendContactForm(formData: ContactForm) {
     return this.http.post(
-      'https://personal-portfolio-api-production-3ffd.up.railway.app/api/contact',
+      'https://braaazzziiillll-hgbva7hdebeqbchb.brazilsouth-01.azurewebsites.net/api/contact',
       formData,
       { responseType: 'text' }
     );

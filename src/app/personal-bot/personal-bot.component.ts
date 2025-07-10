@@ -29,7 +29,7 @@ export class PersonalBotComponent implements AfterViewChecked {
     this.userInput = '';
 
     this.http.post(
-      'https://personal-portfolio-api-production-3ffd.up.railway.app/api/chat/ask',
+      'https://braaazzziiillll-hgbva7hdebeqbchb.brazilsouth-01.azurewebsites.net/api/chat/ask',
       question,
       { responseType: 'text' }
     ).subscribe({
