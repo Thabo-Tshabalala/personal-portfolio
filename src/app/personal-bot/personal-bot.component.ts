@@ -30,8 +30,11 @@ export class PersonalBotComponent implements AfterViewChecked {
 
     this.http.post(
       'https://braaazzziiillll-hgbva7hdebeqbchb.brazilsouth-01.azurewebsites.net/api/chat/ask',
-      question,
-      { responseType: 'text' }
+    question, 
+    {
+      headers: { 'Content-Type': 'text/plain' }, 
+      responseType: 'text'
+    }
     ).subscribe({
       next: (response: string) => {
         this.messages.push({ text: response, from: 'bot' });
