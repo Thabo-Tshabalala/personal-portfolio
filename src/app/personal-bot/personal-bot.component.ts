@@ -13,8 +13,7 @@ import { ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
 })
 export class PersonalBotComponent implements AfterViewChecked {
   userInput = '';
-  messages: { text: string; from: 'user' | 'bot' }[] = [];
-
+  messages: { text: string; from: 'user' | 'bot'; isTyping?: boolean }[] = [];
   private previousMessagesLength = 0;
 
   @ViewChild('messagesContainer') private messagesContainer!: ElementRef;
@@ -28,18 +27,30 @@ export class PersonalBotComponent implements AfterViewChecked {
     this.messages.push({ text: question, from: 'user' });
     this.userInput = '';
 
+    const typingMessage: { text: string; from: 'bot'; isTyping: boolean } = { text: 'Tbot is thinking...', from: 'bot', isTyping: true };
+    this.messages.push(typingMessage);
+
     this.http.post(
       'https://braaazzziiillll-hgbva7hdebeqbchb.brazilsouth-01.azurewebsites.net/api/chat/ask',
       question,
       { responseType: 'text' }
     ).subscribe({
       next: (response: string) => {
+        this.removeTypingMessage();
         this.messages.push({ text: response, from: 'bot' });
       },
       error: () => {
+        this.removeTypingMessage();
         this.messages.push({ text: '⚠️ Unable to reach the kisha backy.', from: 'bot' });
       }
     });
+  }
+
+  removeTypingMessage() {
+    const index = this.messages.findIndex(m => m.isTyping);
+    if (index > -1) {
+      this.messages.splice(index, 1);
+    }
   }
 
   ngAfterViewChecked(): void {
@@ -52,10 +63,7 @@ export class PersonalBotComponent implements AfterViewChecked {
   scrollToBottom(): void {
     try {
       const container = this.messagesContainer.nativeElement;
-      container.scrollTo({
-        top: container.scrollHeight,
-        behavior: 'smooth'
-      });
+      container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' });
     } catch (err) {
       console.warn('Scroll failed:', err);
     }
