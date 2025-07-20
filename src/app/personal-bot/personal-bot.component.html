@@ -29,12 +29,10 @@
 
 <div class="tbot-messages" #messagesContainer>
   <div *ngFor="let msg of messages" [class.user]="msg.from === 'user'" [class.bot]="msg.from === 'bot'">
-    <!-- Regular messages -->
     <p *ngIf="!msg.isTyping">
       <strong>{{ msg.from === 'user' ? 'You' : 'Tbot' }}:</strong> {{ msg.text }}
     </p>
 
-    <!-- Typing indicator -->
     <div *ngIf="msg.isTyping" class="typing-dots">
       <span></span><span></span><span></span>
     </div>
