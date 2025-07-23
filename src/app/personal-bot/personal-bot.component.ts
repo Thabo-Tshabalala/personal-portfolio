@@ -39,7 +39,6 @@ export class PersonalBotComponent implements AfterViewChecked {
         this.removeTypingMessage();
         this.messages.push({ text: response, from: 'bot' });
       },
-<<<<<<< HEAD
       error: (err) => {
         if (err.status === 429) {
           this.messages.push({
@@ -49,11 +48,6 @@ export class PersonalBotComponent implements AfterViewChecked {
         } else {
           this.messages.push({ text: '⚠️ Oops! Looks like the server’s unavailable. Please check back shortly', from: 'bot' });
         }
-=======
-      error: () => {
-        this.removeTypingMessage();
-        this.messages.push({ text: '⚠️ Unable to reach the kisha backy.', from: 'bot' });
->>>>>>> eb31319cb43871f41e2b89a67b578d6827e08523
       }
     })
 
