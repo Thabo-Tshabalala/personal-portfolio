@@ -47,7 +47,9 @@ export class PersonalBotComponent implements AfterViewChecked {
             from: 'bot'
           });
         } else {
-          this.messages.push({ text: '⚠️ Oops! Looks like the server’s unavailable. Please check back shortly', from: 'bot' });
+          this.messages.push({ 
+            // text: '⚠️ Oops! Looks like the server’s unavailable. Please check back shortly', from: 'bot' });
+            text: '⚠️ Chat limit reached! Feel free to browse my site, grab my CV, or drop me an email', from: 'bot' });
         }
       }
     })
