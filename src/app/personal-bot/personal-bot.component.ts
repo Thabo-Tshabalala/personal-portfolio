@@ -19,7 +19,7 @@ export class PersonalBotComponent implements AfterViewChecked {
 
   @ViewChild('messagesContainer') private messagesContainer!: ElementRef;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   sendMessage() {
     if (!this.userInput.trim()) return;
@@ -36,10 +36,18 @@ export class PersonalBotComponent implements AfterViewChecked {
       next: (response: string) => {
         this.messages.push({ text: response, from: 'bot' });
       },
-      error: () => {
-        this.messages.push({ text: '⚠️ Unable to reach the kisha backy.', from: 'bot' });
+      error: (err) => {
+        if (err.status === 429) {
+          this.messages.push({
+            text: '⚠️ Chat limit reached! Feel free to browse my site, grab my CV, or drop me an email',
+            from: 'bot'
+          });
+        } else {
+          this.messages.push({ text: '⚠️ Oops! Looks like the server’s unavailable. Please check back shortly', from: 'bot' });
+        }
       }
-    });
+    })
+
   }
 
   ngAfterViewChecked(): void {
