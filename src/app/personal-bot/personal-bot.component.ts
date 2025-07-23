@@ -40,6 +40,7 @@ export class PersonalBotComponent implements AfterViewChecked {
         this.messages.push({ text: response, from: 'bot' });
       },
       error: (err) => {
+        this.removeTypingMessage();
         if (err.status === 429) {
           this.messages.push({
             text: '⚠️ Chat limit reached! Feel free to browse my site, grab my CV, or drop me an email',
