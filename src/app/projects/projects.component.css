@@ -87,3 +87,9 @@
   filter: blur(2px) brightness(80%);
   transform: scale(1.05);
 }
+.project-highlight {
+  font-size: 0.9rem;
+  /* color: var(--white); */
+  opacity: 0.8;
+  margin-top: 4px;
+}
