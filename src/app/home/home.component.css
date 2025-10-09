@@ -182,8 +182,23 @@
 .info-value {
   margin: 2px 0 0;
   font-size: 16px;
+  position: relative;
+  display: inline-block;
 }
 
+.visible-number {
+  pointer-events: none; 
+  user-select: none;
+}
+.real-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  z-index: 2;
+  user-select: text;
+  pointer-events: auto;
+}
 .icon-container img {
   width: 20px;
   height: 20px;

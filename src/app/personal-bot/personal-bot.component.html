@@ -1,5 +1,8 @@
 <section class="tbot-section">
   <div class="tbot-header">
+<div class="tbot-usage" >
+ 🪙 Daily limit: 15 messages
+</div>
     <h2>👋 Welcome to Tbot</h2>
     <p>
       Your personal assistant who knows everything about Thabo.
@@ -7,31 +10,39 @@
     </p>
   </div>
 
-  <div class="tbot-actions">
-    <button class="tbot-btn" (click)="userInput = 'What does Thabo specialize in?'; sendMessage()">
-      🧠 What does Thabo specialize in?
-    </button>
-    <button class="tbot-btn" (click)="userInput = 'What is Thabo’s current role and experience?'; sendMessage()">
-      💼 What's Thabo’s current role and experience?
-    </button>
-    <button class="tbot-btn" (click)="userInput = 'What exciting projects has Thabo built?'; sendMessage()">
-      🚀 What exciting projects has Thabo built?
-    </button>
-    <button class="tbot-btn" (click)="userInput = 'Tell me about Thabo’s growth journey'; sendMessage()">
-      📈 Tell me about Thabo’s growth journey
-    </button>
-  </div>
+<div class="tbot-actions">
+  <button class="tbot-btn" (click)="userInput = 'Is Thabo open to new job opportunities right now?'; sendMessage()">
+    🔍 Is Thabo open to new job opportunities right now?
+  </button>
+  <button class="tbot-btn" (click)="userInput = 'Can you tell me about Thabo’s key skills and expertise?'; sendMessage()">
+    💼 Can you tell me about Thabo’s key skills and expertise?
+  </button>
+  <button class="tbot-btn" (click)="userInput = 'What exciting projects has Thabo worked on?'; sendMessage()">
+    🚀 What exciting projects has Thabo worked on?
+  </button>
+  <button class="tbot-btn" (click)="userInput = 'How has Thabo grown professionally over time?'; sendMessage()">
+   🧳 Can you tell me about Thabo’s current role and work experience?
+  </button>
+</div>
+
 
   <div class="tbot-features">
     <span>🤖 AI-Powered Responses</span>
-    <span>💬 Natural Conversations</span>
+    <span>💬 Natural Conversations (NLP)</span>
   </div>
 
 <div class="tbot-messages" #messagesContainer>
   <div *ngFor="let msg of messages" [class.user]="msg.from === 'user'" [class.bot]="msg.from === 'bot'">
-    <p><strong>{{ msg.from === 'user' ? 'You' : 'Tbot' }}:</strong> {{ msg.text }}</p>
+    <p *ngIf="!msg.isTyping">
+      <strong>{{ msg.from === 'user' ? 'You' : 'Tbot' }}:</strong> {{ msg.text }}
+    </p>
+
+    <div *ngIf="msg.isTyping" class="typing-dots">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </div>
+
 
   <div class="tbot-input">
     <input
