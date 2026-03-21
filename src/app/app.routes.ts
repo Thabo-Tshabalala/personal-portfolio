@@ -5,12 +5,14 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PersonalBotComponent } from './personal-bot/personal-bot.component';
+import { BlogComponent } from './blog/blog.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/about', pathMatch: 'full' }, 
   { path: 'about', component: AboutMeComponent },
   { path: 'resume', component: ResumeComponent },
   {path: 'projects', component: ProjectsComponent},
+  {path: 'blog', component: BlogComponent},
   { path: 'contact', component: ContactMeComponent },
     { path: 'personalBot', component: PersonalBotComponent },
 ];
