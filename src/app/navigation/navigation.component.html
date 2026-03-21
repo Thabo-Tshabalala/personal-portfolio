@@ -35,7 +35,18 @@
         Projects
       </a>
     </li>
-            <li>
+    <li>
+      <a 
+        routerLink="/blog" 
+        class="nav-item blog" 
+        routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true }" 
+        #rlaProjects="routerLinkActive">
+        Blog🚧👷
+      </a>
+    </li>
+ 
+    <li>
       <a 
         routerLink="/personalBot" 
         class="nav-item tbot" 
