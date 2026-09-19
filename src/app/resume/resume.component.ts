@@ -39,7 +39,7 @@ export class ResumeComponent {
 
 experience = [
   {
-    title: 'Software Developer',
+    title: 'Software Developer 1',
     company: 'Pepkor NexTech',
     duration: 'January 2026 - Present',
     location: 'Cape Town, Hybrid',
