@@ -20,20 +20,20 @@ export class ResumeComponent {
       institution: 'Cape Peninsula University of Technology',
       degree: 'Advanced Diploma in Information Communication and Technology',
       major: 'Software Development',
-      duration: '2025 — 2025',
+      duration: '2025 - 2025',
     },
 
     {
       institution: 'Cape Peninsula University of Technology',
       degree: 'Diploma in Information Communication and Technology',
       major: 'Software Development',
-      duration: '2022 — 2024',
+      duration: '2022 - 2024',
     },
 
     {
       institution: 'Bongane Lebohang Secondary School',
       degree: 'National Senior Certificate (Matriculation)',
-      duration: '2018 — 2020',
+      duration: '2018 - 2020',
     },
   ];
 
